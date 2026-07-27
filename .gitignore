@@ -1,0 +1,22 @@
+# Python cache and build artifacts
+__pycache__/
+*.py[cod]
+build/
+dist/
+*.egg-info/
+
+# Local Python and Conda environments
+.venv/
+venv/
+.conda-env/
+
+# Jupyter temporary files
+.ipynb_checkpoints/
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+
+# Keep the locally stored textbook out of the public repository
+docs/*.pdf
