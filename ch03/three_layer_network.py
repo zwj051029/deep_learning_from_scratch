@@ -21,15 +21,15 @@ def network_init():
         [0.2, 0.4]
     ])
 
-    network['b1'] = np.array([
+    network['b1'] = np.array(
         [0.1, 0.2, 0.3]
-    ])
-    network['b2'] = np.array([
+    )
+    network['b2'] = np.array(
         [0.1, 0.2]
-    ])
-    network['b3'] = np.array([
+    )
+    network['b3'] = np.array(
         [0.1, 0.2]
-    ])
+    )
 
     return network
 
