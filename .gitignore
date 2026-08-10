@@ -20,3 +20,7 @@ venv/
 
 # Keep the locally stored textbook out of the public repository
 docs/*.pdf
+
+# Downloaded and generated MNIST data
+dataset/*.gz
+dataset/mnist.pkl
