@@ -1,0 +1,22 @@
+{
+    "workbench.colorTheme": "Dark+",
+    "python.defaultInterpreterPath": "/home/zhangwenjing/miniconda3/envs/dlfs/bin/python",
+    "python.languageServer": "Pylance",
+    "python.analysis.indexing": true,
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.extraPaths": [
+        "/home/zhangwenjing/miniconda3/envs/dlfs/lib/python3.11/site-packages"
+    ],
+    "editor.semanticHighlighting.enabled": true,
+    "[python]": {
+        "editor.semanticHighlighting.enabled": true,
+        "editor.quickSuggestions": {
+            "other": "on",
+            "comments": "off",
+            "strings": "off"
+        },
+        "editor.suggestOnTriggerCharacters": true
+    },
+    "python-envs.defaultEnvManager": "ms-python.python:conda",
+    "python-envs.defaultPackageManager": "ms-python.python:conda"
+}

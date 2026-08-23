@@ -14,12 +14,8 @@ venv/
 .ipynb_checkpoints/
 
 # Editors and operating systems
-.vscode/
 .idea/
 .DS_Store
-
-# Keep the locally stored textbook out of the public repository
-docs/*.pdf
 
 # Downloaded and generated MNIST data
 dataset/*.gz
