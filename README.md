@@ -18,6 +18,7 @@
 - 实现两层全连接神经网络、SimpleConvNet 和 DeepConvNet；
 - 包含数值梯度与反向传播的梯度检查；
 - 包含训练后的 CNN 参数，可直接用于推理和可视化实验。
+- 同时保存简洁环境说明和 Linux 平台的精确 Conda 环境锁定文件。
 
 ## 学习路线
 
@@ -106,7 +107,8 @@ deep_learning_from_scratch/
 │   ├── ch01.md ... ch08.md
 │   └── images/           # 笔记配图
 ├── .vscode/              # 本项目的 VS Code Python 配置
-├── environment.yml       # Conda 环境说明
+├── environment.yml       # 简洁、便于迁移的 Conda 环境说明
+├── explicit.txt          # Linux 64 位 Conda 精确环境锁定文件
 └── README.md
 ```
 
@@ -123,7 +125,18 @@ Pillow
 
 Anaconda 和 Miniconda 都可以使用。本项目开发时使用 Miniconda。
 
-### 创建环境
+### 两种环境存档
+
+仓库同时保存了两种用途不同的环境文件：
+
+| 文件 | 内容 | 适用场景 |
+|---|---|---|
+| [`environment.yml`](environment.yml) | Python 3.11 和项目直接依赖，不锁定全部精确版本 | 日常创建环境、迁移到其他平台 |
+| [`explicit.txt`](explicit.txt) | 完整软件包地址、版本和构建信息 | 在 Linux 64 位系统上精确重建原环境 |
+
+`environment.yml` 更简洁、可读性和可移植性更好；`explicit.txt` 由 Conda `26.5.3` 导出，用于长期存档当前环境。
+
+### 使用 `environment.yml` 创建环境
 
 在仓库根目录执行：
 
@@ -138,6 +151,17 @@ conda activate dlfs
 conda env update -n dlfs -f environment.yml
 conda activate dlfs
 ```
+
+### 使用 `explicit.txt` 精确重建
+
+在 Linux 64 位系统上执行：
+
+```bash
+conda create -n dlfs --file explicit.txt
+conda activate dlfs
+```
+
+精确锁定文件与生成它的平台相关，不建议直接用于 Windows 或 macOS。在其他平台上应优先使用 `environment.yml`。
 
 验证环境：
 
